@@ -1,0 +1,54 @@
+
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            
+            <div class="card shadow">
+                <div class="card-header">
+                    <h2>Add new user</h2>
+                </div>
+                <div class="card-body">
+
+                    <form action="/user" method="POST" enctype="multipart/form-data">
+
+                        <div class="my-3">
+                            <label for="">Name</label>
+                            <input name="name" class="form-control" type="text">
+                        </div>
+
+                        <div class="my-3">
+                            <label for="">Email</label>
+                            <input name="email" class="form-control" type="text">
+                        </div>
+                        
+                        <div class="my-3">
+                            <label for="">Cell</label>
+                            <input name="cell" class="form-control" type="text">
+                        </div>
+                        
+                        <div class="my-3 ">
+                            <label for="">Photo</label>
+                            <img class="preview_photo" src="" alt="">
+                            <br>
+
+                            <label for="upload_stydent_photo"><img class="upload_photo" src="https://image.shutterstock.com/image-vector/photo-camera-icon-vector-illustration-260nw-616552292.jpg" alt=""></label>
+                            <input name="user_photo" multiple id="upload_stydent_photo" class="" type="file">
+                        </div>
+                        <hr>
+                        <div class="my-3 ">
+                            <label for="">Upload your CV</label>
+                            <input name="cv" class="" type="file">
+                        </div>
+
+                        <div class="my-3">
+                            <input value="Create Now" class="form-control btn btn-primary" type="submit">
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.css"/>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  
+    <%- body %> 
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js"></script>
+
+    <script>
+      
+
+      $('.studentTable').DataTable();
+
+
+      const student_image = document.querySelector('#upload_stydent_photo');
+      const preview_photo = document.querySelector('.preview_photo');
+
+      student_image.onchange = (e) => {
+        
+        const imageLink = URL.createObjectURL(e.target.files[0]);
+
+        console.log(imageLink);
+
+        preview_photo.setAttribute('src', imageLink)
+      }
+    </script>
+</body>
+</html>
